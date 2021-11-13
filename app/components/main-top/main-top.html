@@ -1,3 +1,34 @@
-<section class="main-top">
-    Content
+<section class="main-top__wrapper">
+    <div class="main-top">
+        <div class="main-top__title">
+            <div class="main-top__title-left-side">
+                <img class="main-top__title-logo-img" src="<%= 'assets/images/title-logo.png'%>">
+                <h2 class="main-top__title-text">Фильтр масла <br /> в подарок</h2>
+                <a class="main-top__title-link" href="#">
+                    <span class="main-top__title-link-text">подробнее</span>
+                    <svg class="main-top__title-link-svg" width="39" height="22" viewBox="0 0 39 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 10.0833H35.1739L26.9043 1.45176L28.4783 0L39 11L28.4783 22L27.0435 20.5652L35.1739 11.9167H0V10.0833Z" fill="#1C69D4" />
+                    </svg>
+                </a>
+            </div>
+        
+            <img class="main-top__title-img" src="<%= 'assets/images/oil-main.png'%>">
+        
+            <div class="main-top__title-right-side">
+                <h1 class="main-top__title-main">New Energy</h1>
+            </div>
+        </div>
+
+        <ul class="main-top__benefits">
+            <li class="main-top__benefits-item">
+                ${require('html-loader?&interpolate!../benefit/benefit.html')}
+            </li>
+            <li class="main-top__benefits-item">
+                ${require('html-loader?&interpolate!../benefit/benefit.html')}
+            </li>
+            <li class="main-top__benefits-item">
+                ${require('html-loader?&interpolate!../benefit/benefit.html')}
+            </li>
+        </ul>
+    </div>
 </section>

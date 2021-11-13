@@ -32,6 +32,16 @@ body {
     justify-content: flex-start;
     margin: 40px 50px 56px;
     height: calc(100vh - 140px);
+
+    @media (max-width: grid('lg')) {
+        margin: 20px 20px 28px;
+        height: calc(100vh - 160px);
+    }
+
+    @media (max-width: grid('md')) {
+        margin: 0 0 30px;
+        height: calc(100vh - 130px);
+    }
 }
 
 button {
