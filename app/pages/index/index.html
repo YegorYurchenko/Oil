@@ -6,6 +6,13 @@
 }) %>
 
 <div class="page">
+    <%= _.template(require('html-loader?&interpolate!../../components/header/header.html'))() %>
+    
+    <main class="main">
+        <%= _.template(require('html-loader?&interpolate!../../components/main-top/main-top.html'))() %>
+    </main>
+
+    <%= _.template(require('html-loader?&interpolate!../../components/footer/footer.html'))() %>
 </div>
 
 <%= _.template(require('html-loader?&interpolate!../../layouts/footer.html'))() %>

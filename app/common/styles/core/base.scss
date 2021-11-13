@@ -19,16 +19,19 @@ body {
     position: relative;
     display: block;
     margin: 0;
+}
+
+.page {
     background-color: color('gray');
 }
 
 .main {
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 40px 50px 56px;
+    height: calc(100vh - 140px);
 }
 
 button {

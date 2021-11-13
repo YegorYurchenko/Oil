@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+    background-color: color('white');
+
+    @media (max-width: grid('lg')) {
+        height: 160px;
+    }
+
+    @media (max-width: grid('md')) {
+        height: 130px;
+    }
+}

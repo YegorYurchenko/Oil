@@ -1,0 +1,14 @@
+.footer {
+    display: flex;justify-content: center;
+    align-items: center;
+    padding: 0 0 20px;
+    height: 116px;
+
+    @media (max-width: grid('lg')) {
+        height: 150px;
+    }
+
+    @media (max-width: grid('md')) {
+        height: 465px;
+    }
+}
