@@ -3,7 +3,11 @@
         <div class="main-top__title">
             <div class="main-top__title-left-side">
                 <img class="main-top__title-logo-img" src="<%= 'assets/images/title-logo.png'%>">
-                <h2 class="main-top__title-text">Фильтр масла <br /> в подарок</h2>
+                <h2 class="main-top__title-text">
+                    Фильтр масла
+                    <br />
+                    в подарок
+                </h2>
                 <a class="main-top__title-link" href="#">
                     <span class="main-top__title-link-text">подробнее</span>
                     <svg class="main-top__title-link-svg" width="39" height="22" viewBox="0 0 39 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,15 +24,11 @@
         </div>
 
         <ul class="main-top__benefits">
-            <li class="main-top__benefits-item">
-                ${require('html-loader?&interpolate!../benefit/benefit.html')}
-            </li>
-            <li class="main-top__benefits-item">
-                ${require('html-loader?&interpolate!../benefit/benefit.html')}
-            </li>
-            <li class="main-top__benefits-item">
-                ${require('html-loader?&interpolate!../benefit/benefit.html')}
-            </li>
+            <% benefits.forEach((benefit) => { %>
+                <li class="main-top__benefits-item">
+                    ${require('html-loader?&interpolate!../benefit/benefit.html')}
+                </li>
+            <% }) %>
         </ul>
     </div>
 </section>

@@ -9,7 +9,33 @@
     <%= _.template(require('html-loader?&interpolate!../../components/header/header.html'))() %>
     
     <main class="main">
-        <%= _.template(require('html-loader?&interpolate!../../components/main-top/main-top.html'))() %>
+        <%= _.template(require('html-loader?&interpolate!../../components/main-top/main-top.html'))({
+            benefits: [
+                {
+                    index: "01",
+                    title: "Бесплатный звонок",
+                    description: "На любые номера РФ",
+                    descriptionAdditional: "8 800 550-19-80",
+                    buttonText: "+7 (928) 107-80-80",
+                    buttonType: "phone",
+                    buttonHref: "tel:+79281078080"
+                },
+                {
+                    index: "02",
+                    title: "Бесплатный подбор",
+                    description: "Мы найдем самую низкую цену на оригинальную запчасть, достойную альтернативу или самый дешевый аналог.",
+                    buttonText: "Заявка на подбор",
+                    buttonType: "button"
+                },
+                {
+                    index: "03",
+                    title: "Бесплатная доставка",
+                    description: "Согласуем и привезём запчасти в офис или домой в удобное для Вас время.",
+                    buttonText: "Пункты выдачи",
+                    buttonType: "button"
+                }
+            ]
+        }) %>
     </main>
 
     <%= _.template(require('html-loader?&interpolate!../../components/footer/footer.html'))() %>

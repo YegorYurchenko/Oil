@@ -5,11 +5,15 @@
     justify-content: space-between;
     margin: 0 30px;
 
+    @media (max-width: grid('md')) {
+        margin: 0 10px;
+    }
+
     &__wrapper {
         height: 539px;
         background-image: url(../images/background.png);
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: top center;
         background-size: cover;
 
         @media (max-width: grid('lg')) {
@@ -17,7 +21,8 @@
         }
 
         @media (max-width: grid('md')) {
-            height: 517px;
+            min-height: 517px;
+            height: auto;
         }
     }
 
@@ -31,6 +36,7 @@
     }
 
     &__title-left-side, &__title-right-side {
+        z-index: 5;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -43,7 +49,16 @@
     
     &__title-text {
         margin: 0 0 30px;
+        max-width: 310px;
+        font-size: 42px;
+        line-height: 49px;
         color: color('white');
+
+        @media (max-width: grid('md')) {
+            max-width: 202px;
+            font-size: 36px;
+            line-height: 40px;
+        }
     }
     
     &__title-link {
@@ -55,6 +70,9 @@
 
     &__title-link-text {
         margin: 0 16px 0 0;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 600;
         color: color('black');
     }
 
@@ -62,6 +80,14 @@
         position: absolute;
         top: 10px;
         left: calc(50% - 148px);
+        transition: all 0.3s ease-in-out;
+
+        @media (max-width: grid('md')) {
+            height: 298px;
+            top: 40px;
+            left: calc(94% - 142px);
+            transition: all 0.3s ease-in-out;
+        }
     }
 
     &__title-main {
@@ -69,12 +95,14 @@
         font-size: 75px;
         font-weight: 300;
         line-height: 72px;
+        transition: all 0.3s ease-in-out;
 
         @media (max-width: grid('xl')) {
             font-size: 60px;
+            transition: all 0.3s ease-in-out;
         }
 
-        @media (max-width: grid('xl')) {
+        @media (max-width: grid('lg')) {
             display: none;
         }
     }
@@ -86,11 +114,21 @@
         margin: 0 auto 24px;
         max-width: 1440px;
         width: 100%;
+
+        @media (max-width: grid('md')) {
+            flex-direction: column;
+            margin: 0 auto 20px;
+        }
     }
 
     &__benefits-item {
         flex-grow: 1;
+        flex-basis: 33.3%;
         margin: 0 30px 0 0;
+
+        @media (max-width: grid('md')) {
+            margin: 0 0 20px;
+        }
 
         &:last-child {
             margin: 0;
